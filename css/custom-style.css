@@ -1,0 +1,121 @@
+/* Personalizaciones del tema */
+:root {
+  /* Colores personalizados */
+  --main-color: #ff7a18; /* Color principal naranja */
+  --accent-color: #319197; /* Color acento turquesa */
+  --gradient-bg: linear-gradient(130deg,var(--main-color),#af002d 41.07%,var(--accent-color) 76.05%);
+  
+  /* Fuentes personalizadas */
+  --title-font: 'Poppins', var(--title-font);
+  --body-font: 'Inter', var(--body-font);
+  
+  /* Radios y sombras */
+  --border-radius: 10px;
+  --card-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Mejoras de diseño */
+.header-inner {
+  background: var(--gradient-bg);
+}
+
+.header-inner .main-logo-wrap {
+  padding: 20px 0;
+}
+
+.header-inner .main-logo-wrap #main-logo {
+  max-height: 40px;
+}
+
+.main-nav {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+  margin: 10px 0;
+}
+
+.main-nav .main-menu > li > a {
+  color: #fff;
+  font-weight: 500;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+}
+
+.main-nav .main-menu > li > a:hover {
+  background: rgba(255,255,255,0.2);
+  border-radius: var(--border-radius);
+}
+
+/* Cards mejoradas */
+.blog-posts .post-outer {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease;
+}
+
+.blog-posts .post-outer:hover {
+  transform: translateY(-5px);
+}
+
+.entry-image-wrap {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/* Footer mejorado */
+.footer-widgets-wrap {
+  background: var(--gradient-bg);
+  color: #fff;
+  padding: 60px 0;
+}
+
+.footer-widgets-wrap .widget-title {
+  color: #fff;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Botones personalizados */
+.button {
+  background: var(--gradient-bg);
+  border: none;
+  border-radius: var(--border-radius);
+  color: #fff;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Animaciones suaves */
+.entry-title a,
+.entry-image-wrap,
+.social a,
+.button {
+  transition: all 0.3s ease;
+}
+
+/* Dark mode mejorado */
+html.is-dark {
+  --content-bg: #1a1a1a;
+  --card-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 10px;
+  }
+  
+  .main-nav {
+    margin: 5px 0;
+  }
+  
+  .blog-posts .post-outer {
+    margin-bottom: 20px;
+  }
+}
